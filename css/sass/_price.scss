@@ -1,0 +1,274 @@
+
+#price-section{  
+ 
+    padding-bottom: 30px;
+    .flip-card-3d{
+        margin: 15px auto;
+        padding: 0px 10px;
+        width: 260px;
+        height: 420px;   
+        perspective: 900px;
+    
+        .price-box{ 
+            padding: 10px;
+            background-color: rgb(83, 2, 2);
+            height: 420px;
+            position: absolute;
+            box-shadow: 0px 0px 30px 10px rgba(255, 2, 2, 0.082)inset;
+            border-radius: 45px;   
+            transition: all 1.05s ease-in-out;
+            transform-style: preserve-3d;
+      
+            .card-front-part{   
+                margin: 0px;
+                height: 100%;
+                backface-visibility: hidden;
+                box-shadow: 0px 0px 20px 15px rgb(105, 4, 4);
+                border-radius: 25px;
+                background-color: white;
+                .front-part{
+                    color: black;
+                    padding: 10px;
+                    background-color: crimson;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: 0px 0px 70px 10px rgb(3, 3, 3)inset;
+                    border-radius: 35px;
+                   
+                    .price{
+                        text-align: center;
+                        padding-top: 2px;
+                        height: 30px;
+                        width: 50%;
+                        margin: 10px auto;            
+                        box-shadow: 0px 5px 20px 3px rgba(218, 60, 107, 0.658)inset;
+                        border-radius: 10px;
+                        color: rgba(255, 255, 255, 0.774);
+                        p{
+                            @include big-text();
+                            font-size: 25px;
+                        }
+                        .dollar{
+                            font-size: 12px;
+                            margin-left: 2px;
+                            color: rgb(255, 255, 255);
+                        }
+    
+                    }
+                    .packeg-name{
+                        
+                        background-color: rgba(207, 138, 9, 0.555);
+                        @include big-text();
+                        font-size: 25px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        box-shadow: 0px 5px 20px 3px rgba(197, 9, 119, 0.788)inset;
+                        border-radius: 10px;
+                    }
+                    
+                    .front-menu{
+                        margin-top: 10px;
+                        text-align: center;
+                       b{
+                            font-size: 17px;
+                       }
+                       
+                        li{
+                            text-transform: capitalize;
+                            padding: 0px 5px;
+                            margin-top: 8px;
+                            i{
+                                font-size: 7px;  
+                                color: rgb(39, 12, 12);
+                                position: relative;
+                                top: -3.5px;
+                                left: -3px;
+                            }
+                        }
+                        
+                    }
+                  
+                    .front-footer{
+                        font-weight: 400;
+                        text-align: center;
+                        text-transform: capitalize;
+    
+                        .number{
+                            @include big-text();
+                            font-size: 18px;
+                            color: rgba(0, 0, 0, 0.589);
+                           
+                        }
+                        .discount{
+                            color: rgb(5, 5, 5);
+                            font-size: 10px;
+                            margin-right: 2px;
+                            margin-left: -2px;
+                        }
+                    }
+                   
+                }
+            }
+    
+            .card-back-part{
+                position: relative;
+                top: -400px;
+                height: 100%;
+                width: 100%;
+                backface-visibility: hidden;
+                transform: rotateY(180deg);
+                box-shadow: 0px 0px 20px 15px rgb(105, 4, 4);
+                border-radius: 25px;
+                background-color: white;
+                .back-part{
+                    color: black;
+                    padding: 10px;
+                    background-color: crimson;
+                    width: 100%;
+                    height: 100%;
+                    box-shadow: 0px 0px 70px 10px rgb(3, 3, 3)inset;
+                    border-radius: 35px;
+                    .popular-star{
+    
+                        .checked{
+                            color: rgb(255, 255, 255);
+                            text-shadow: 3px 3px 3px #CE5937;
+                            &:hover{
+                                color: yellow;
+                            }
+                        }
+                        .fa-3x{
+                            position: relative;
+                            top: -8px;
+                        }
+                    }
+                    .popular{
+                        @include h3();
+                        color: rgb(255, 255, 255);
+                        text-shadow: 2px 2px 2px #CE5937;
+                        border: 1px solid white;
+                        margin-bottom: 10px;
+                    }
+                    .back-menu{
+                        
+                        b{
+                            margin-left: 10px;
+                        }
+                        .job-list {
+                            display: block;
+                          }
+                          
+                          .job-list input {
+                            padding: 0;
+                            height: initial;
+                            width: initial;
+                            margin-bottom: 0;
+                            display: none;
+                            cursor: pointer;
+                          }
+                          
+                          .job-list label {
+                            position: relative;
+                            cursor: pointer;
+                          }
+                          
+                          .job-list label:before {
+                            content:'';
+                            -webkit-appearance: none;
+                            background-color: transparent;
+                            border: 1px solid #feffff;
+                            border-radius: 10px;
+                            box-shadow: 2px 2px 2px #CE5937, inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+                            padding: 7px;
+                            display: inline-block;
+                            position: relative;
+                            vertical-align: middle;
+                            cursor: pointer;
+                            margin-right: 5px;
+                            margin-bottom: 5px;
+                          }
+                          
+                          .job-list input:checked + label:after {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            top: 0px;
+                            left: 5px;
+                            width: 6px;
+                            height: 14px;
+                            border: solid yellow;
+                            border-width: 0 3px 3px 0;
+                            transform: rotate(45deg);
+                        }
+                        
+                       
+                    }
+                    .back-footer{
+                        margin-top: -5px;
+                           text-align: center;
+                        .note{
+                            color: yellow;
+                            font-weight: 500;
+                        }
+                    }
+                    #contacts-btn{
+                        display: block;
+                        margin: 2px auto;
+                        width: 80px;
+                        background-color: transparent;
+                        padding: 2px 5px;
+                        border: 1px solid white;
+                        color: white;
+                        transition: 0.5s ease-in-out;
+                        &:hover{
+                            transform: scale(1.1);
+                            box-shadow: 0px 0px 20px 3px rgb(14, 14, 14);
+                        }
+                    }
+                }
+            }
+            .front-btn, .back-btn{
+                border: none;
+                background-color: transparent;
+                width: 40px;
+                height: 40px;
+                margin: 0px auto 20px auto;
+                display: block;
+                color: white;
+                &:hover{
+                    color: blue;
+                    
+                }
+            }
+        }
+        .do-flip-1 {
+            -o-transform: rotateY(-180deg);
+            -webkit-transform: rotateY(-180deg);
+            -ms-transform: rotateY(-180deg);
+            transform: rotateY(180deg);
+        }
+    
+        hr{
+            margin: 3px 0px 10px 0px;
+            padding: 0px;
+        }
+    }
+    .price-footer{
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+}
+
+
+
+
+
+
+
+
+    
+    
+
+
+

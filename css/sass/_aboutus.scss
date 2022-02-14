@@ -1,0 +1,145 @@
+#aboutus-section{
+    .adderss{
+        color: white;
+        h2{
+            font-size: 30px;
+            
+        }
+        hr{
+            margin-bottom: 40px;
+        }
+        ul{
+            li{
+                margin-bottom: 20px;
+                font-size: 16px;
+                font-weight: bold;
+                transition: all 0.5s ease-in-out;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+    
+        .brand-logo{
+            i{
+                margin-top: 60px;
+                color: rgb(0, 0, 0);
+                transition: all 1.05s ease-in-out;
+                &:hover{
+                    color: rgba(255, 255, 255, 0);
+                }
+            }
+            .fa-6x, .fa-4x, .fa-2x{
+                padding: 2px;
+                position: relative;
+                animation: logo 9.8s linear infinite;
+            }
+            .fa-4x{
+                left: -37px;
+            }
+            .fa-2x{
+                left: -69px;
+            }
+
+            @keyframes logo
+            {
+                0% {   
+                    transform: rotate(900deg);
+                }
+                10%{
+                    transform: rotate(1100deg);
+                }
+                20% {   
+                    transform: rotate(1300deg);
+                }
+                30%{
+                    transform: rotate(1500deg);
+                }
+                40% {   
+                    transform: rotate(1700deg);
+                }
+                50%{
+                    transform: rotate(1900deg);
+                }
+                60% {   
+                    transform: rotate(2100deg);
+                }
+                70%{
+                    transform: rotate(2300deg);
+                }
+                80% {   
+                    transform: rotate(2500deg);
+                }
+                90%{
+                    transform: rotate(2700deg);
+                }
+                100%{
+                    transform: rotate(2800deg);
+                }
+  
+            }
+            .fa-5x, .fa-3x{
+                padding: 2px;
+                position: relative;
+                left: -20px;
+               
+                animation: logo1 9.8s linear infinite;
+            }
+            .fa-3x{
+                left: -54px;
+            }
+            @keyframes logo1
+            {
+                0% {   
+                    transform: rotate(-900deg);
+                }
+                10%{
+                    transform: rotate(-1100deg);
+                }
+                20% {   
+                    transform: rotate(-1300deg);
+                }
+                30%{
+                    transform: rotate(-1500deg);
+                }
+                40% {   
+                    transform: rotate(-1700deg);
+                }
+                50%{
+                    transform: rotate(-1900deg);
+                }
+                60% {   
+                    transform: rotate(-2100deg);
+                }
+                70%{
+                    transform: rotate(-2300deg);
+                }
+                80% {   
+                    transform: rotate(-2500deg);
+                }
+                90%{
+                    transform: rotate(-2700deg);
+                }
+                100%{
+                    transform: rotate(-2800deg);
+                }
+  
+            }
+        }
+    
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+            .brand-logo{
+                .fa-2x{
+                    display: none !important;
+                }
+               }
+        }
+        @media screen and (max-width: 385px) {
+           .brand-logo{
+            .fa-2x{
+                display: none !important;
+            }
+           }
+        }
+}

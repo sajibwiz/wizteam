@@ -1,0 +1,839 @@
+//    <!--==========================================-->
+// <!--===========global sectoin start=============================-->
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+}
+
+// hide ::-webkit-scrollbar-----------------#
+   body {
+       -ms-overflow-style: none; /* for Internet Explorer, Edge */
+       scrollbar-width: none; /* for Firefox */
+       overflow-y: scroll; 
+    }
+     
+    body::-webkit-scrollbar {
+       display: none; /* for Chrome, Safari, and Opera */
+    }
+    // <!--===========global sectoin end=============================-->
+//    <!--==========================================-->
+
+
+//     <!-- ==================-->
+// <!--======minix functoin start===========-->
+@mixin big-text {
+    font-weight: bolder;
+    font-family: 'Luxurious Roman', cursive;
+
+}
+@mixin h2 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: 'Lobster Two', sans-serif;
+
+}
+@mixin h3 {
+    
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Neuton', serif;
+}
+@mixin p {
+    text-transform: capitalize;
+    font-size: 14px;
+    
+}
+.parallax-window {
+    // min-height: 400px;
+    background: transparent;
+}
+// <!--======minix functoin end===========-->
+//     <!-- ==================-->
+
+//     <!-- ==================-->
+// <!--=========website all headedr start ============-->
+
+.title-section{
+    padding: 30px 0px;
+    margin-bottom: 0px;
+  
+    .header{
+        text-align: center;
+        &:hover{
+            .wizlogo{
+                transform: rotateZ(180deg);
+            }
+        }
+        .title-white{
+            font-family: 'Playfair Display SC', serif;
+            font-size: 35px;
+            color: rgb(0, 0, 0);
+            
+        }
+        .title-black{
+            text-transform: uppercase;
+            font-family: 'IM Fell English SC', serif;
+            font-size: 35px;
+            color: rgb(255, 255, 255);
+        }
+        .wizlogo {
+            width: 100%;
+            height: 18px;
+            background: url('../../images/logo/wizlogo.png') no-repeat center center;
+            margin: 5px 0 2px;
+            transition: all 1.05s ease-in-out;
+           
+        }
+        .subtitle-white{
+            width: 70%;
+            margin: 0px auto;
+            font-size: 17px;
+            color: rgba(0, 0, 0, 0.692);
+        }
+        .subtitle-black{
+            width: 70%;
+            margin: 0px auto;
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.781);
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .title-section{
+            padding: 20px 0px;
+            margin-bottom: 0px;
+        }
+       
+    }
+    @media screen and (max-width: 768px) {
+        .title-section{
+            padding: 10px 0px;
+            margin-bottom: 0px;
+        }
+    }
+    @media screen and (max-width: 576px) {
+        .title-section{
+            padding: 5px 0px;
+            margin-bottom: 0px;
+        }   
+    }
+}
+// <!--=========== website all headedr end ============-->
+//     <!-- ==========================-->
+
+//     <!-- ==========================================-->
+// <!--===========preloader function start=============================-->
+.loader {
+	background: none repeat scroll 0 0 #ffffff;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 9999; 
+    .loader_inner {
+        background-image: url("../../images/logo/1493.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #fff;
+        height: 100px;
+        width: 100px;
+        margin-top: -30px;
+        margin-left: -60px;
+        left: 50%;
+        top: 50%;
+        position: absolute; 
+    }
+}
+
+// <!--===========preloader function end=============================-->
+//     <!-- ==========================================-->
+
+//     <!-- ==========================================-->
+// <!--===========navbar sectoin start=============================-->
+#navbar-section{
+   
+    .fixed-top {
+        position: fixed;
+        background-attachment: fixed;
+        top: 0;
+        right: 0%;
+        left: 0%;
+    }
+    
+    .nav{
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        line-height: 50px;
+        text-align: center;
+        div.logo{
+            width: 180px;
+            height: 10px;
+            // position: absolute;
+            // left: 5%;
+           
+            a{
+                font-family: 'Playfair Display SC', serif;
+                text-decoration: none;
+                color: rgb(177, 253, 0);
+                font-size: 40px;
+                text-transform: uppercase;
+            }
+        }
+        .navbar-menu{
+            // width: 600px;
+            height: 60px;
+            float: right;
+            ul{
+                width:100%;
+                height: 65px;
+                display: flex;
+                list-style: none;
+                li{
+                    
+                    height: 65px;
+                    margin: 0;
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        // line-height: 65px;
+                        text-transform: uppercase;
+                        &:hover{
+                            color: #2f00ff;
+                        }
+                    }
+                }
+      
+            }
+        }
+        .humbarger {
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            position: absolute;
+            right: 25px;
+            top: 12px;
+            display: none;
+            button.humbarger-btn {
+                width: 100%;
+                height: 100%;
+                background-color: transparent;
+                outline: 0;
+                border: none;
+                cursor: pointer;
+                i{
+                    color: white;
+                }
+            }
+        }
+    }
+    
+
+    /* Medai qurey section */
+    @media screen and (max-width:992px) {
+        .container{
+            margin: 0;
+            max-width: 98% !important;
+        }
+        .nav-link{
+            padding: 9px;
+        }
+    }
+
+    @media screen and (max-width:768px) {
+        
+        .container{
+            margin: 0;
+            max-width: 100% !important;
+        }
+        
+        .nav div.logo{
+            margin-left: 15px;
+            z-index: -1;
+        }
+        
+        .nav div.navbar-menu{
+            width: 100%;
+            height: 0px;
+            overflow: hidden;
+           
+            ul{
+                flex-direction: column;
+                width: 100%;
+                height: 300px;
+                top: 50px;
+                right: 0;
+                left: 0;
+                li{
+                    width: 100%;
+                    height: 40px;
+                    background-color:rgba(0, 0, 0, 0.986);
+                    a{
+                        text-align: center;
+            
+                          line-height: 40px;
+                          width: 100%;
+                          height: 40px;
+                          display: table;
+                      }
+                }
+           
+            }
+        }
+        
+        .nav div.toggle-function{
+            height: 300px;
+        }
+        
+       
+        
+
+        
+        .nav div.humbarger{
+            display: block;
+        }
+    }
+}
+// <!--===========navbar sectoin end ============-->
+//     <!-- ==========================-->
+
+//     <!-- ==========================================-->
+// <!--===========carousel sectoin start=============================-->
+#carousel-section{
+
+    #slider{
+        background-position: center top;
+	    background-repeat: no-repeat;
+	    background-size:cover;
+	    width:100%;
+	    height: 670px;
+        
+        #slider-cap{
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            margin-bottom: 50px;
+           h2{
+            text-align: center;
+            margin-right: 20px;
+            padding: 0px;
+            color: rgb(255, 255, 255);
+            text-transform: uppercase;
+            font-size: 35px;
+            @include h2();
+            margin-bottom: 10px;
+           }
+            h1{
+                margin-right: 20px;
+                text-align: center;
+                padding: 0px;
+                color: rgb(255, 255, 255);
+                text-transform: uppercase;
+                font-size: 55px;
+                @include big-text();
+                margin-bottom: 20px;
+            }
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 16px;
+                text-align: center;
+                margin-right: 20px;
+                margin-top: 15px;
+                color: rgb(255, 255, 255);
+                text-transform: capitalize;
+            
+            }
+           
+            #read-more{
+                width: 150px;  
+                margin-top: 20px;
+                margin-left: -0px;
+               
+                background-color: grey;
+                &:hover{
+                    background-color: green;
+              }
+            }
+        }
+    }
+    #slider:before {
+        background-color: #000;
+        content: "";
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0.5;
+        position: absolute;
+        width: 100%;
+    }
+    .btn-left{
+        font-size: 40px;
+        left: 10px;
+        font-size: 35px;
+        height: 40px;
+        line-height: 40px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        width: 32px;
+        z-index: -1;
+        transition: 300ms;
+        transition: all 1.05s ease-in-out;
+        &:hover{
+            transform: scale(1.05);
+            color: white;
+        }
+    }
+    .btn-right{
+        font-size: 40px;
+        font-size: 35px;
+        height: 40px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        right: 10px;
+        width: 32px;
+        z-index: -1;
+        transition: 300ms;
+        transition: all 1.05s ease-in-out;
+        &:hover{
+            transform: scale(1.05);
+            color: white;
+        }
+    }
+    .caro-btn{
+        color: rgb(237, 241, 1);
+        padding: 5px 10px;
+    }
+    #side-aroow:hover .btn-left {
+        z-index: 1;
+        
+    }
+    #side-aroow:hover .btn-right {
+        z-index: 1;
+        
+    }
+    @media screen and (min-width: 768px) and (max-width: 992px) {
+        .container{
+            max-width: 90% !important;
+        }
+    }
+    @media screen and (min-width: 0px) and (max-width: 768px) {
+        .container{
+            max-width: 90% !important;
+        }
+        #slider-cap{
+            h2{
+                font-size: 25px !important;
+            }
+            h1{
+                font-size:45px !important;
+            }
+        }
+    }
+ 
+}
+// <!--===========carousel sectoin end ============-->
+//     <!-- ==========================-->
+
+//     <!-- ==========================================-->
+// <!--===========import file sectoin start=============================-->
+@import 'service';
+// <!--===========import file sectoin end ============-->
+//     <!-- ==========================-->
+
+//     <!-- ==========================================-->
+// <!--===========our goal sectoin start=============================-->
+#choose-section{
+
+        .choose-box{
+  
+        }
+
+        #slider-mini{
+            cursor: ew-resize;
+            width: 100%;
+            margin: 0px auto;
+            .mini-title{
+                margin-top: 50px;
+                @include big-text();
+                font-size: 25px;
+                text-transform: uppercase;
+                text-align: center;
+                margin-left: 10px;
+                color: rgb(255, 255, 255);
+            }
+
+            .reason{
+                text-align: center;
+                padding: 0px 10px;
+                margin: 20px auto;
+                color: rgb(255, 255, 255);
+            }
+        }
+       
+}  
+// <!--===========our goal sectoin end ============-->
+//     <!-- ==========================-->
+
+//     <!-- ==========================================-->
+// <!--===========import file sectoin start=============================-->
+@import'protfolio';
+// <!--===========import file sectoin end ============-->
+//     <!-- ==========================-->
+
+//     <!-- ==========================================-->
+// <!--=========== sectoin start=============================-->
+#reviews-section{
+        
+        .reviews-img{
+            
+            .img-box{
+                padding: 5px;
+                    cursor: pointer;
+                    margin: 0px auto;
+                img{
+                    box-shadow: -0px 0px 20px 5px rgb(3, 3, 3);
+                    border-radius: 10%;
+                    width: 250px;
+                    height:250px;
+                    padding: 5px;
+                    margin: 20px auto;
+                    transition: all 1.1s ease-in-out;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+            }
+    
+        }
+        .reviews-text{
+           
+            .text-box{
+               margin-top: 70px;
+               
+                p{
+                   
+                    margin-top: 5px;
+                    color: white;
+                    font-size: 18px;
+                    text-align: center;
+                    line-height: 25px;
+                     
+                     .left-q{
+                         position: relative;
+                         top: -5px;
+                         font-size: 17px;
+                         color: rgb(255, 0, 0);
+                         margin-right: 2px;
+                     }
+                     .right-q{
+                         position: relative;
+                         top: -5px;
+                         font-size: 17px;
+                         color: rgb(255, 0, 0);
+                         margin-left: 2px;
+                     }
+                }
+                .img-name{
+                    font-size: 22px;
+                    color: white; 
+                    
+                    margin-bottom: 10px;
+                }
+
+            }
+        }
+        @media screen and (max-width: 995px) {
+            .reviews-text{
+              
+                .text-margin{
+                    padding-left: 40px !important;
+                }
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .reviews-text{
+                
+                margin-bottom: 30px !important;
+                .text-margin{
+                    margin-top: 0px !important;
+                    padding: 0px !important;
+                }
+            }
+        }
+
+}
+// <!--=========== sectoin end ============-->
+//     <!-- ==========================-->
+
+//     <!-- ==========================================-->
+// <!--===========import file sectoin start=============================-->
+@import'price';
+// <!--===========import file sectoin end ============-->
+//     <!-- ==========================-->
+
+//     <!-- ==========================================-->
+// <!--===========acheivement sectoin start=============================-->
+#achieve-section{
+        
+        background-color: rgba(0, 0, 0, 0.637);
+        .counters {
+            
+            
+            color: rgb(208, 224, 208);
+           .acheive-iteam{
+            
+               margin-bottom: 20px;
+           }
+        }
+        .counter {
+            font-size: 30px;
+            margin: 10px 0;
+        }
+        .acheive-box{
+            i{
+                text-shadow: 0px 5px 5px #ff0808;
+                transition: all 0.7s ease-in-out;
+                &:hover{
+                    transform: rotate(360deg);
+                }
+            }
+        }
+        .acheive-text{
+            padding: 5px;
+            font-size: 20px;
+            
+            
+        }
+}
+// <!--===========acheivement sectoin end ============-->
+//     <!-- ==========================-->
+
+//     <!-- ==========================================-->
+// <!--===========import file sectoin start=============================-->
+@import'teams';
+// <!--===========import file sectoin end ============-->
+//     <!-- ==========================-->
+
+//     <!-- ==========================================-->
+// <!--===========skills sectoin start=============================-->
+#skills-section{
+        // background-color: rgba(0, 0, 0, 0.637);
+       
+        .progress {
+            height: 20px;
+            background-color: #020202c7;
+            border-radius: 0;
+            margin-bottom: 25px;
+        }
+        .progress-bar {
+            box-shadow: none;
+            -webkit-box-shadow: none;
+            text-align: right;
+            padding-right: 12px;
+            color: rgb(0, 0, 0);
+            font-size: 12px;
+            font-weight: 600;
+            background-color: rgb(208, 224, 208);
+            
+        }
+        .progress .progress-bar.six-sec-ease-in-out {
+            -webkit-transition: width 2s ease-in-out;
+            transition:  width 2s ease-in-out;
+        }
+        .skill-name{
+            color: rgb(245, 245, 245);
+            font-size:16px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            text-align: left;
+        }
+        /*Features-stylesheets-include-here*/
+        #features {
+            text-align:center;
+            padding:2% 0%;
+        }
+        
+}
+// <!--===========skills sectoin end ============-->
+//     <!-- ==========================-->
+
+//     <!-- ==========================================-->
+// <!--=========== contacts sectoin start=============================-->
+#contacts-section{
+
+
+        .contact-fqa{
+            color: rgb(0, 0, 0);
+            // overflow: auto;
+            h2{
+                font-size: 30px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                
+            }
+            .fqa-box{
+                margin-bottom: 30px;
+                position: relative;
+                .qus, .qus2, .qus3, .qus4, .qus5{
+                    font-size: 16px;
+                    
+                    font-weight: bold;
+                    cursor: pointer;
+                    .up-down{
+                        position: absolute;
+                        right: 20px;
+                        
+                        font-size: 16px;
+                    }
+                }
+                .ans, .ans2, .ans3, .ans4, .ans5{
+                    display: none;
+                    background-color: yellow;
+                }
+            }
+        }
+        .contact-box{
+            h2{
+                color: rgb(0, 0, 0);
+                font-size: 25px;
+                margin-bottom: 10px;
+            }
+            .form-group {
+                margin-bottom: 10px;
+            }
+            textarea.form-control {
+                min-height: 120px;
+                // resize: none;
+            }
+            .form-control {
+                border: 1px solid rgb(0, 0, 0);
+                height: 35px;
+                border-radius: 0;
+                box-shadow: none;
+                background-color: transparent;
+                transition: all 0.5s ease-in;
+                &:focus{
+                    border: 1px solid rgb(11, 250, 3);
+                    transform: scale(1.02);
+                    color: rgb(255, 249, 249);
+                    background-color: #000;
+                }
+            
+            }
+            .btn-send {
+                display: block;
+                color: #ffffff;
+                background-color: #000;
+                border: 1px solid #000000;
+                padding: 5px 10px;
+                font-size: 15px;
+                text-align: center;
+                text-decoration: none;
+                width: 100%;
+                margin-bottom: 30px;
+                transition: all 0.5s ease-in;
+                &:hover {
+                    border: 1px solid rgb(11, 250, 3);
+                    transform: scale(1.02);
+                 
+                }
+            }
+
+         
+        }
+      
+        
+}
+// <!--===========contacts  sectoin end ============-->
+//     <!-- ==========================-->
+
+//     <!-- ==========================================-->
+// <!--===========joint us sectoin start=============================-->
+#jointus-section{
+        // height: 300px;
+        // background-color: rgba(0, 0, 0, 0.336);
+        .col-box{
+            margin-bottom: 20px;
+            .media-box{
+                // padding: 30px;
+                
+                a{
+                    text-decoration: none;
+                    i{
+                        // color: rgb(255, 0, 43);
+                        text-shadow: 0px 5px 5px #000000;
+                        transition: all 0.5s ease-in;
+                        &:hover{
+                            transform: scale(1.10);
+                        }
+                    }
+                    p{
+                        color: blue;
+                        margin-top: 10px;
+                        font-size: 19px;
+                        
+                    }
+                }
+         
+            }
+        }
+        @media screen and (max-width: 575px) {
+            .col-box{
+                width: 50% !important;
+            }
+           .media-box{
+               text-align: center !important;
+           }
+        }
+}
+// <!--===========joint us sectoin end ============-->
+//     <!-- ==========================-->
+
+//     <!-- ==========================================-->
+// <!--===========import file sectoin start=============================-->
+@import'aboutus';
+// <!--===========import file sectoin end ============-->
+//     <!-- ==========================-->
+
+
+//     <!-- ==========================================-->
+// <!--===========sitemap sectoin start=============================-->
+#sitemap-section{
+        height: 80px;
+        background-color: rgba(75, 39, 59, 0.404);
+        .copyright{
+            padding-top: 30px;
+            font-weight: 600;
+        }
+}
+// <!--===========sitemap sectoin end ============-->
+//     <!-- ==========================-->
+
+//     <!-- ==========================-->
+// <!--===========back to top sectoin start ============-->
+#backtotop{
+    background-color: rgb(255, 6, 6);
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 2px;
+    .fa-chevron-up{
+        margin-top: 4px;
+        
+        color: rgb(255, 255, 255);
+        
+    }
+}
+// <!--===========back to top sectoin end ============-->
+//     <!-- ==========================-->
